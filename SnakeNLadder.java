@@ -48,6 +48,17 @@ public class SnakeNLadder {
 	 if(positionUC5 == 100)
 		 System.out.println("Congrates player one has won :)");
  }
+ void countDiceNum() {
+	 int positionUC6 = (int) ((Math.random() * 6) + 1);
+	 int count = 1;
+	 while(positionUC6 <= 100) {
+		 
+		 positionUC6 = positionUC6 + positionUC6;  
+//		 System.out.println("Position : On Square [" + positionUC6 + "]");
+		 count++;
+	      }
+	 System.out.println("Dice thrown " + (count+1) + " numbers of time to reach 100");
+ }
  		
 public static void main(String args[]) {
 		
@@ -71,6 +82,9 @@ public static void main(String args[]) {
 //UC5		
 		SnakeNLadder exactH = new SnakeNLadder();
 		exactH.exactHundred();
+//uC6
+		SnakeNLadder countd = new SnakeNLadder();
+		countd.countDiceNum();
 	}
 
 }
